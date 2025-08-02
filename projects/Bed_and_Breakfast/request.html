@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<nav class="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="request.html">Reservations</a><i class="fa-duotone fa-solid fa-check"></i></li>
+    </ul>
+</nav>
+
+<body style="background-color: #6E172C;">
+    <div class="container">
+        <form  method="get" action="thankyou.html">
+            <fieldset>
+                <legend>
+                    Reservation Information
+                </legend>
+                <label for="firstname">
+                    First Name:
+                    <input type="text" name="firstname" id="firstname" required placeholder="First Name">
+                </label>
+                <label for="lastname">
+                    Last Name:
+                    <input type="text" name="lastname" id="lastname" required placeholder="Last Name">
+                </label>
+                <label for="phone">
+                    Phone Number:
+                    <input type="number" name="phone" id="phone" required placeholder="Phone Number">
+                </label>
+                <label for="email">
+                    Email:
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                </label>
+                <label for="contact">
+                    Preffered Contact:
+                    <select name="contact" id="contact">
+                        <option>Phone</option>
+                        <option>Email</option>
+                        <option>Owl</option>
+                        <option>Smoke Signals</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Ammenities</legend>
+                <label>
+                    Balcony
+                    <input type="checkbox" name="amenitites1" value="balcony" id="amenities1">
+                </label>
+                <label>
+                    Chauffeur
+                    <input type="checkbox" name="amenitites2" value="Chauffeur" id="amenities2">
+                </label>
+                <label>
+                    Maid Services
+                    <input type="checkbox" name="amenitites3" value="Maid Services" id="amenities3">
+                </label>
+                <label>
+                    Lunch Included
+                    <input type="checkbox" name="amenitites4" value="Lunch Included" id="amenities4">
+                </label>
+                <label>
+                    Dinner Included
+                    <input type="checkbox" name="amenitites5" value="Dinner Included" id="amenities5">
+                </label>
+            </fieldset>
+            <script>
+            $(function() {
+                if (!Modernizr.inputtypes['date']) {
+                    $('input[type=date]').datepicker({ 
+                        dateFormat: 'mm-dd-yy'
+                    });
+                }
+            });
+            </script>
+            <fieldset>
+                <legend>Preffered Dates</legend>
+                <label>
+                    Select Check-In Date:
+                    <input type="date" name="checkin" required>
+                </label>
+                 <label>
+                    Select Check-Out Date:
+                    <input type="date" name="checkout" required>
+                </label>
+            </fieldset>
+            <input class="submit" type="submit" value="Submit" >
+            
+        </form>
+        
+    </div>
+
+</body>
+
+</html>

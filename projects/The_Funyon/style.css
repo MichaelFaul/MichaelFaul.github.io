@@ -1,0 +1,172 @@
+/*used google font*/
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+/*setting image size for mobile first view to be majority of screen width*/
+.news-img {
+    width: 85%;
+    padding-top: 8px;
+}
+
+.title {
+    /*Styles the text specific to the banner with google font, size, text color and background color and centers the text*/
+    font-size: 50px;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #408F2C;
+    text-align: center;
+}
+
+/*setting background style for entire body for uniform look*/
+body {
+    background-color: #DACA51;
+    display: block;
+    border: 2px solid #408F2C;
+    /* Thin banner-style border */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px;
+    text-align: center;
+
+}
+
+/*setting border for all sections individually*/
+section {
+    border: 2px solid #408F2C;
+    /* Thin banner-style border */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px;
+}
+
+/*!!not displaying stories on mobile first view to save space "hypothetically" user would click article to read it*/
+p {
+    display: none;
+}
+
+/*styles the subscribe box--look is uniform across all sizes*/
+label {
+    /*styles all tags using class label*/
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+/*!!not displaying the subscribe box at top to limit space use for better use on smaller devices*/
+.subscribe {
+    display: none;
+}
+
+/*!!displaying the subscribe at bottom stacked vertically for best mobile display*/
+.subscribe-lower {
+    display: block;
+}
+
+/*!!displaying the nav buttons stacked on top of each other for limited space*/
+a {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 15px;
+    background-color: #408F2C;
+    padding: 5px;
+    text-align: center;
+    width: 80%;
+}
+
+
+@media(min-width: 576px) {
+
+    /*!!slightly thicker border making it more prominent as screen size increases*/
+    section {
+        border-width: 4px;
+        padding: 20px;
+    }
+
+    /*!!Begins displaying the story, still all stacked for lack of space*/
+    p {
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+@media(min-width: 720px) {
+
+    /*!!making the border slightly more prominent as screen size increases*/
+    section {
+        border: 6px solid #408F2C;
+        /* Thin banner-style border */
+
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px;
+    }
+
+    /*!!adjusting image size for screen and layout change*/
+    .news-img {
+        width: 400px;
+        height: 250px;
+        float: left;
+
+    }
+
+    /*!!changing the way the text was displayed instead of all verticle it now pops out beside the image*/
+    .story-text {
+        display: inline;
+        padding-left: 20px;
+    }
+
+    /*float break for formating*/
+    .seven-break {
+        clear: both;
+    }
+
+    /*!!Changing how nav is displayed*/
+    nav {
+        display: inline
+    }
+
+    /*!!changing how nav is displayed*/
+    a {
+        display: inline;
+        background-color: #408F2C;
+        padding: 10px;
+
+
+    }
+}
+
+@media(min-width: 992px) {
+
+    /*!!float break for formating image for screen size change*/
+    .break {
+        clear: both;
+    }
+
+    /*!!increasing font size as screen increases*/
+    h2 {
+        font-size: 80px;
+    }
+
+    /*!!formatting text with pictures for largest screen size*/
+    .seven-break {
+        position: initial;
+    }
+
+    /*!!Moving sunscribe button up top for largest screen size*/
+    .subscribe {
+        display: block;
+        position: relative;
+        border-color: #408F2C;
+        margin-top: 20px;
+    }
+
+    /*!!no longer displaying subscribe at bottom*/
+    .subscribe-lower {
+        display: none;
+    }
+
+}

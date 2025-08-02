@@ -1,0 +1,107 @@
+/*Imported font using google fonts for use across all pages*/
+@import url('https://fonts.googleapis.com/css2?family=Engagement&family=Oooh+Baby&display=swap');
+
+.oooh-baby-regular {
+    font-family: "Oooh Baby", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav {
+    /*navigation pane specific styling background color is maroon using hex code and text color is black*/
+    background-color: #6E172C;
+    color: black;
+}
+
+a:visited {
+    /*Changes the hyperlinks in navigation pane to green after being clicked*/
+    color: #72D848;
+}
+
+a:hover {
+    /*Changes the font color to yellow when hovering over hyperlink for accessability*/
+    color: #F3D44A
+}
+
+.banner {
+    /* adjust position of banner basrd on content around it and sets the width based on the content's size */
+    position: relative;
+    width: fit-content;
+
+}
+
+.banner img {
+    /*Changes the size of pictures on banner and emits the space between pictures and banner content*/
+    width: 210px;
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+/*Styles the text specific to the banner with google font, size, text color and background color and centers the text with 20px padding all around*/
+    font-family: "Oooh Baby", cursive;
+    font-size: 40px;
+    font-style: oblique;
+    background-color: #64452f;
+    padding: 20px;
+    text-align: center;
+}
+
+.table,
+th,
+td {
+    /*Styles all table content ewith th and td tag also puts border around rows and columns in table */
+    border: 2px solid gray;
+    background-color: #64452f;
+    font-family: "Oooh Baby", cursive;
+    font-size: 30px;
+    font-style: normal;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.table-img {
+    /*Adjusts size of pictures within the table*/
+    width: 200px;
+    height: 100px;
+}
+
+.table-caption {
+    /*background color of table caption to marron*/
+    background-color: #6E172C;
+}
+
+.container {
+    /*styles using the class container to change background color and put space around content*/
+    margin: auto;
+    width: 90%;
+    background-color: #64452f;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+body {
+    /*background image for all pages to wood grain img*/
+    background-image: url(woodgrainbackground.jpg);
+}
+
+label {
+    /*styles all tags using class label*/
+    display: block;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+input {
+    /*position and sizes label within container for clean look*/
+    position: absolute;
+    left: 18%;
+    width: 75%;
+}
+
+.submit {
+    /*Puts the submit button back to defaault position*/
+    width: initial;
+    position: initial;
+}
